@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shorcut icon" type="x-icon" href="logo/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWJEANSVERSE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container" id="signup" style="display:none;">
+      <h1 class="form-title">Sign Up</h1>
+      <form method="post" action="">
+
+        <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
+        <div class="input-group">
+           <i class="fas fa-user"></i>
+           <input type="text"  id="uname2" placeholder="Username" required>
+           <label for="username"></label>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text"  id="fullname" placeholder="Fullname" required>
+            <label for="fullname"></label>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-calendar"></i>
+            <input type="number"  id="age" placeholder="Age" required>
+            <label for="age"></label>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="pword2"  placeholder="Password" required>
+            <input type="checkbox" id="show-password2">
+        </div>
+       <button class="btn" id="submitSignUp">Sign Up</button>
+      </form>
+      <div class="links">
+        <p>Already have an account?<span><button id="signInButton">Log In</button></span></p>
+      </div>
+    </div>
+
+  <div class="container" id="signIn">
+        <h1 class="form-title">Log In</h1>
+        <form method="post" action="">
+          <div id="signInMessage" class="messageDiv" style="display:none;"></div>
+
+          <div class="input-group">
+              <i class="fas fa-user"></i>
+              <input type="text"  id="uname1" placeholder="Username" required>
+              <label for="username"></label>
+          </div>
+          <div class="input-group">
+              <i class="fas fa-lock"></i>
+            <input type="password" id="pword1"  placeholder="Password" required>
+            <input type="checkbox" id="show-password1">
+          </div>
+         <button  class="btn"  id="submitSignIn">Log In</button>
+        </form>
+        <div class="links">
+          <p>Don't have account yet?<span><button id="signUpButton">Sign Up</button></span></p>
+        </div>
+      </div>
+      <script type="module" src="script.js"></script>
+      <script>
+        const signUpButton=document.getElementById('signUpButton');
+        const signInButton=document.getElementById('signInButton');
+        const signInForm=document.getElementById('signIn');
+        const signUpForm=document.getElementById('signup');
+
+        signUpButton.addEventListener('click',function(){
+            signInForm.style.display="none";
+            signUpForm.style.display="block";
+        })
+        signInButton.addEventListener('click', function(){
+            signInForm.style.display="block";
+            signUpForm.style.display="none";
+        })
+      </script>
+      <script>
+        const passwordInput1 = document.getElementById('pword1');
+        const passwordInput2 = document.getElementById('pword2');
+        const showPasswordCheckbox1 = document.getElementById('show-password1');
+        const showPasswordCheckbox2 = document.getElementById('show-password2');
+
+        showPasswordCheckbox1.addEventListener('change', function() {
+            if (this.checked) {
+                passwordInput1.type = 'text'; // Show the password
+            } else {
+                passwordInput1.type = 'password'; // Hide the password
+            }
+        });
+
+        showPasswordCheckbox2.addEventListener('change', function() {
+            if (this.checked) {
+                passwordInput2.type = 'text'; // Show the password
+            } else {
+                passwordInput2.type = 'password'; // Hide the password
+            }
+        });
+    </script>
+</body>
+</html>

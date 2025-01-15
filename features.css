@@ -1,0 +1,309 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/*------------------------------------- NAVIGATION BAR SECTION ------------------------------------------*/
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #FFFBEB;
+}
+
+.navbar-brand img {
+    display: block;
+    max-height: 60px;
+    left: 30%;
+    width: 90px; 
+    margin-left: 20px; 
+    margin-right: 25px;
+}
+
+.nav-item {
+    font-size: 15px;
+    font-weight: 900;
+    position: relative;
+    right: 120px;
+}
+
+.webname {
+    color: #51428A;
+    font-size: 24px;
+    font-weight: 900;
+    position: relative;
+    left: 10px;
+    top: 8px;
+}
+
+.nav-item .dropdown-item {
+    display: flexbox;
+}
+
+.navbar-nav .nav-link {
+    color: rgb(13, 2, 23); /* Text color */
+    transition: all 0.3s ease; /* Smooth transition */
+    padding: 10px 15px; /* Padding around the links */
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #50428a;
+    background-color: #50428a24; /* Light background color on hover */
+    transform: scale(1.05); /* Slightly scale up the link */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */  
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.navbar-nav .nav-link.active {
+    color: #FFFBEB;
+    background-color: #51428A;
+    border-radius: 10px;
+}
+
+.navbar-nav .nav-link.active:hover {
+    color: #51428A;
+    background-color: #50428a24; /* Light background color on hover */
+    transform: scale(1.05); /* Slightly scale up the link */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */  
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+/*------------------------------------- HOMEPAGE STYLE SECTION ------------------------------------------*/
+.home {
+    background-color: #c8bfe7;
+    height: 950px;
+}
+
+.homeh1 {
+    color: #FFFBEB;
+    font-size: 120px;
+    font-weight: 1000;
+    position: relative;
+    top: 290px;
+    left: 80px;
+
+}
+
+.homeh3 {
+    color: #51428A ;
+    font-size: 90px;
+    font-weight: 1000;
+    position: relative;
+    top: 250px;
+    left: 80px;
+
+}
+
+.desc {
+    width: 900px;
+    color: #FFFBEB;
+    font-size: 20px;
+    font-weight: 100;
+    position: relative;
+    top: 240px;
+    left: 80px;
+
+}
+
+.see-more-button {
+    background-color: #51428A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    position: relative;
+    top: 250px;
+    left: 85px;
+}
+
+.see-more-button:hover {
+    color: #51428A;
+    font-weight: 500;
+    background-color: #FFFBEB; /* Darker blue on hover */
+}
+
+.home2 {
+    background-color: #FFFBEB;
+    height: 950px;
+}
+/*------------------------------------- FOOTER STYLE SECTION ------------------------------------------*/
+.footer {
+    background-color: #8478B2;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.footer-logo img {
+    max-width: 100px; 
+    position: relative;
+    top: 90px;
+    left: -10px;
+}
+
+.website-name {
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    left: -30px;
+    top:90px;
+}
+
+.contact-us {
+    font-size: 35px;
+    font-weight: bold;
+    position: relative;
+    top: 100px;
+}
+
+.about-us {
+    font-size: 35px;
+    font-weight: bold;
+    position: relative;
+    left: 260px;
+    top: -60px;
+}
+
+.webdesc {
+    position: relative;
+    top: -80px;
+    left: 260px;
+}
+
+.d-flex {
+    position: relative;
+    left: 230px;
+    top: 90px;
+}
+.btn i {
+    font-size: 1.25rem; /* Adjust icon size */
+    position: relative;
+    top: 1px;
+    color: #ffffff;
+}
+
+.btn:hover {
+    color: #fff; /* Change icon color on hover */
+    background-color: #ffffff; /* Change background color on hover */
+}
+
+.btn-outline-primary {
+    border-color: #ffffff;
+    border-width: 2px;
+}
+
+.btn-outline-primary:hover {
+    background-color: #3b9aff; /* Set background color on hover */
+    border-color: #3b9aff; /* Ensure border color changes on hover */
+}
+
+.text-center {
+    font-size: 20px;
+}
+
+
+/*------------------------------------- SCREEN RESPONSIVENESS STYLE SECTION ------------------------------------------*/
+/*Phone*/
+@media screen and (max-width: 480px) {
+}
+
+/* Cellphone screens (max-width: 767px) */
+@media screen and (max-width: 767px) {
+    .navbar-brand img {
+        max-height: 50px;
+        width: 70px;
+    }
+
+    .nav-item {
+        font-size: 12px;
+        right: -5px;
+    }
+
+    .webname {
+        font-size: 20px;
+    }
+
+}
+
+/* Half screen of a 24-inch monitor (width: 960px) */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .navbar-brand img {
+        max-height: 55px;
+        width: 80px;
+    }
+
+    .nav-item {
+        font-size: 14px;
+        right: -10px;
+    }
+    
+    .webname {
+        font-size: 22px;
+    }
+
+    .about-us {
+        font-size: 35px;
+        font-weight: bold;
+        position: relative;
+        left: 150px;
+        top: -60px;
+    }
+    
+    .webdesc {
+        font-size: 15px;
+        text-align: left;
+        position: relative;
+        top: -80px;
+        left: 150px;
+    }
+    
+    .d-flex {
+        position: relative;
+        left: 120px;
+        top: 90px;
+    }
+
+    .contact-us {
+        font-size: 33px;
+        font-weight: bold;
+        position: relative;
+        top: 105px;
+        left: 30px;
+    }
+
+    .footer-logo img {
+        left: -45px;
+        top: 105px;
+    }
+
+    .website-name{
+        left: -60px;
+        top: 100px;
+    }
+}
+
+/* Full screen of a 24-inch monitor (width: 1920px) */
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+    .navbar-brand img {
+        max-height: 60px;
+        width: 90px;
+    }
+
+    .nav-item {
+        font-size: 15px;
+        right: 100px;
+    }
+
+    .webname {
+        font-size: 24px;
+    }
+}
