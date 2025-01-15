@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shorcut icon" type="x-icon" href="logo/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NEWJEANSVERSE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+	html {
+		scroll-behavior: smooth;
+}	
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #C8BFE7;
+            width: 100vw;
+            overflow-x: hidden;
+        }
+
+/*------------------------------------- NAVIGATION BAR SECTION ------------------------------------------*/
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 222222222;
+    background-color: #FFFBEB;
+    border-bottom: 2px solid #51428A;
+}
+
+.navbar-brand img {
+    display: block;
+    max-height: 60px;
+    left: 30%;
+    width: 90px; 
+    margin-left: 20px; 
+    margin-right: 25px;
+}
+
+.nav-item {
+    font-size: 15px;
+    font-weight: 900;
+    position: relative;
+    right: 120px;
+}
+
+.webname {
+    color: #51428A;
+    font-size: 24px;
+    font-weight: 900;
+    position: relative;
+    left: 10px;
+    top: 8px;
+}
+
+.nav-item .dropdown-item {
+    display: flexbox;
+}
+
+.navbar-nav .nav-link {
+    color: rgb(13, 2, 23); /* Text color */
+    transition: all 0.3s ease; /* Smooth transition */
+    padding: 10px 15px; /* Padding around the links */
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #50428a;
+    background-color: #50428a24; /* Light background color on hover */
+    transform: scale(1.05); /* Slightly scale up the link */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */  
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.navbar-nav .nav-link.active {
+    color: #FFFBEB;
+    background-color: #51428A;
+    border-radius: 10px;
+}
+
+.navbar-nav .nav-link.active:hover {
+    color: #51428A;
+    background-color: #50428a24; /* Light background color on hover */
+    transform: scale(1.05); /* Slightly scale up the link */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */  
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+/*------------------------------------- FOOTER STYLE SECTION ------------------------------------------*/
+.footer {
+    background-color: #8478B2;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.footer-logo img {
+    max-width: 100px; 
+    position: relative;
+    top: 90px;
+    left: 50px;
+}
+
+.website-name {
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    left: 20px;
+    top:90px;
+}
+
+.contact-us {
+    font-size: 35px;
+    font-weight: bold;
+    position: relative;
+    top: 100px;
+    left: 130px;
+}
+
+.about-us {
+    font-size: 35px;
+    font-weight: bold;
+    position: relative;
+    left: 240px;
+    top: -60px;
+}
+
+.webdesc {
+    position: relative;
+    top: -80px;
+    left: 240px;
+}
+
+.d-flex {
+    position: relative;
+    left: 350px;
+    top: 90px;
+}
+.btn i {
+    font-size: 1.25rem; /* Adjust icon size */
+    position: relative;
+    top: 1px;
+    color: #ffffff;
+}
+
+.btn i:hover {
+    color: #50428a;
+}
+
+.btn:hover {
+    color: #fff; /* Change icon color on hover */
+    background-color: #ffffff; /* Change background color on hover */
+}
+
+.btn-outline-primary {
+    border-color: #ffffff;
+    border-width: 2px;
+}
+
+.btn-outline-primary:hover {
+    background-color: #c8bfe7; /* Set background color on hover */
+    border-color: #c8bfe7;
+}
+
+.text-center {
+    font-size: 20px;
+    position: absolute;
+    top: 1400px;
+    left: 800px;
+}
+
+        /* Responsive Styles */
+        @media screen and (max-width: 767px) {
+            .navbar-brand img {
+                max-height: 50px;
+                width: 70px;
+            }
+
+            .nav-item {
+                font-size: 12px;
+                right: -5px;
+            }
+
+            .webname {
+                font-size: 20px;
+                margin-bottom: 50px;
+            }
+
+            .about-us, .contact-us {
+                font-size: 25px;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            .navbar-brand img {
+                max-height: 55px;
+                width: 80px;
+            }
+
+            .nav-item {
+                font-size: 14px;
+                right: -10px;
+            }
+            
+            .webname {
+                font-size: 22px;
+            }
+            .flash-sale {
+            margin-top: 50px;
+            }
+
+            .about-us {
+        font-size: 35px;
+        font-weight: bold;
+        position: relative;
+        left: 150px;
+        top: -60px;
+    }
+    
+    .webdesc {
+        font-size: 15px;
+        text-align: left;
+        position: relative;
+        top: -80px;
+        left: 150px;
+    }
+    
+    .d-flex {
+        position: relative;
+        left: 120px;
+        top: 90px;
+    }
+
+    .contact-us {
+        font-size: 33px;
+        font-weight: bold;
+        position: relative;
+        top: 105px;
+        left: 30px;
+    }
+
+    .footer-logo img {
+        left: -45px;
+        top: 105px;
+    }
+
+    .website-name{
+        left: -60px;
+        top: 100px;
+    }
+
+    .text-center {
+      position: absolute;
+      left: 300px;
+      font-size: 20px;
+    }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .navbar-brand img {
+                max-height: 60px;
+                width: 90px;
+            }
+
+            .nav-item {
+                font-size: 15px;
+                right: 100px;
+            }
+
+            .webname {
+                font-size: 24px;
+            }
+            .flash-sale {
+            	margin-top: 50px;
+            }
+        }
+
+.content {
+      margin-top: 150px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      padding: 30px;
+    }
+
+    .left, .right {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .image {
+      width: 400px;
+      height: auto;
+    }
+
+    .new-image {
+      margin-top: 20px;
+    }
+
+    .title {
+      color: #51428A;
+      text-shadow: #000000;
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .price {
+	color: #51428A;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .quantity button {
+      background-color: transparent;
+      color: #51428A;
+      border: none;
+      padding: 10px;
+      margin: 5px;
+      font-weight: bold;
+    }
+
+    .btn-custom {
+      background-color: #51428A;
+      color: #ffffff;
+      padding: 15px;
+      cursor: pointer;
+      width: 100%;
+      border:none;
+      font-weight: bold;
+    }
+
+    .btn-custom:hover {
+      background-color: #FFFBEB;
+      color: #51428A;
+      border: 2px solid #51428A;
+    }
+
+    .modal-header, .modal-body, .modal-footer {
+      background-color: #8478B2;
+      color: #FFFBEB;
+    }
+
+    </style>
+</head>
+<body>
+    <!----------------- NAVIGATION BAR ----------------->
+    <!---- WEBSITE LOGO ---->
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="../index.html">
+          <img src="logo/logo.png" height="50">
+      </a>
+       <!---- WEBSITE NAME ---->
+      <p class="webname">NEWJEANSVERSE</p>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!---- NAVBAR BUTTON ---->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../features.html">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pricelist.html">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../developers.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../login.html">Login</a>
+            </li>
+          </ul>
+      </div>
+  </nav>
+    
+
+<main class="main">
+    <div class="content">
+      <div class="container">
+        <div class="left">
+          <img src="../../products/ditto.png" class="image" alt="Product Image">
+          <img src="../../products/ditto-back.png" class="image new-image" alt="Product Image Hover">
+        </div>
+
+        <div class="right">
+          <div class="title">Ditto Album</div>
+	<br><br>
+          <div class="price">Price: 2499</div>
+         <br><br>
+          <div class="quantity">
+            <strong>Quantity</strong><br>
+            <button onclick="decreaseQuantity()">-</button>
+            <span id="quantity">1</span>
+            <button onclick="increaseQuantity()">+</button>
+          </div>
+	<br><br>
+
+          <div id="liveAlertPlaceholder"></div>     
+
+          <button type="button" class="btn-custom" id="alertBtn">ADD TO CART</button>
+          <br>
+          <button type="button" class="btn-custom" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            BUY NOW
+          </button>
+
+          <!-- Modal Structure -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Are you sure you want to buy?
+                </div>
+                <div class="modal-footer">
+		<a href="#"><button type="button" class="btn-custom" data-bs-dismiss="modal" aria-label="Close">BUY NOW</button></a>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+    <!----------------- FOOTER SECTION ----------------->
+    <footer class="footer">
+      <div class="container">
+          <div class="row py-4">
+              <div class="col-md-6">
+                  <div class="footer-logo">
+                      <a class="footlogo" href="index.html">
+                      <img src="logo/logowhite.png" alt="Website Logo" class="img-fluid mb-2" style="max-width: 120px;">
+                      </a>
+                      <p class="website-name">NEWJEANSVERSE</p>
+                  </div>
+                  <p class="about-us mt-3">About Us</p>
+                  <h5 class="webdesc">Discover new, latest and trendy Newjeans Merchandise in our shop. Newjeans Square is your ultimate destination for exclusive Newjeans essentials.</h5>
+              </div>
+              <div class="col-md-6 text-md-end">
+                  <p class="contact-us">Contact Us</p>
+                  <div class="d-flex justify-content-center mb-4">
+                      <a href="https://www.facebook.com/official.newjeans/" class="btn btn-outline-primary mx-2" target="_blank" aria-label="Facebook">
+                          <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="https://www.instagram.com/newjeans_official/" class="btn btn-outline-primary mx-2" target="_blank" aria-label="Facebook">
+                          <i class="fab fa-instagram"></i>
+                      </a>
+                      <a href="mailto:newjeanssquareofficial@gmail.com" class="btn btn-outline-primary mx-2" target="_blank" aria-label="Facebook">
+                          <i class="fas fa-envelope"></i>
+                      </a>
+                      <a href="tel:+1234567890" class="btn btn-outline-primary mx-2" aria-label="Phone">
+                          <i class="fas fa-phone"></i>
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div class="text-center py-3 border-top">
+              <small>&copy; 2024 NEWJEANSVERSE. All rights reserved.</small>
+          </div>
+      </div>
+  </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    let quantity = 1;
+
+    function increaseQuantity() {
+      quantity++;
+      document.getElementById('quantity').innerText = quantity;
+    }
+
+    function decreaseQuantity() {
+      if (quantity > 1) {
+        quantity--;
+        document.getElementById('quantity').innerText = quantity;
+      }
+    }
+
+    document.getElementById('alertBtn').addEventListener('click', function () {
+      var alertPlaceholder = document.getElementById('liveAlertPlaceholder');
+      
+      var alert = document.createElement('div');
+      alert.className = 'alert alert-custom alert-dismissible fade show';
+      alert.role = 'alert';
+      alert.innerHTML = 'This feature is not yet available <button type="button" class="btn-close" aria-label="Close"></button>';
+      
+      alertPlaceholder.appendChild(alert);
+
+      // Manual dismissal handler
+      alert.querySelector('.btn-close').addEventListener('click', function () {
+        alert.remove();
+      });
+    });
+  </script>
+</body>
+</html>
